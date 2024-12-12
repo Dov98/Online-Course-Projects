@@ -1,0 +1,15 @@
+//my age
+var myAge = 25;
+//early years
+var earlyYears = 2;
+earlyYears *= 10.5;
+//later years
+var laterYears = myAge -2;
+//later years in dog
+laterYears *=4;
+//my age in dog years
+var myAgeInDogYears = earlyYears+laterYears;
+//making name lowercase
+var myName = "David".toLowerCase();
+//making the sentence
+console.log(`My name is ${myName}. I am ${myAge} years old in human years which is ${myAgeInDogYears} years old in dog years.`)
