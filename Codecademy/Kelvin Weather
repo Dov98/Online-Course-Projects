@@ -1,0 +1,9 @@
+//The forecast is 293 kelvin
+const kelvin = 293;
+//celsius is kelvin minus 273
+const celsius = kelvin-273;
+//changing celsius to farenheight
+let fahrenheit = (celsius*(9/5)+32);
+//rounding farenheight number
+fahrenheit = Math.floor(fahrenheit);
+console.log(`The temperature is ${fahrenheit} degrees Farenheit`);
