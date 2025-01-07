@@ -1,0 +1,47 @@
+function getSleepHours(day) {
+  if (day === "Sunday") {
+    return 7;
+  } else if (day === "Monday") {
+    return 8;
+  } else if (day === "Tuesday") {
+    return 6;
+  } else if (day === "Wednesday") {
+    return 7;
+  } else if (day === "Thursday") {
+    return 5;
+  } else if (day === "Friday") {
+    return 9;
+  } else if (day === "Saturday") {
+    return 5;
+  }
+}
+
+const getActualSleepHours = () =>
+  getSleepHours("Sunday") +
+  getSleepHours("Monday") +
+  getSleepHours("Tuesday") +
+  getSleepHours("Wednesday") +
+  getSleepHours("Thursday") +
+  getSleepHours("Friday") +
+  getSleepHours("Saturday");
+
+function getIdealSleepHours() {
+  const idealHours = 8;
+  return idealHours * 7;
+}
+
+function calculateSleepDebt() {
+  const actualSleepHours = getActualSleepHours();
+  const idealSleepHours = getIdealSleepHours();
+  if (actualSleepHours == idealSleepHours) {
+    console.log("You got the perfect amount of sleep!");
+  } else if (actualSleepHours >= idealSleepHours) {
+    console.log("You got more sleep than needed.");
+  } else if (actualSleepHours <= idealSleepHours) {
+    console.log("You should get some more sleep");
+  }
+  console.log(actualSleepHours - idealSleepHours);
+}
+console.log(`You slept ${getActualSleepHours()} hours.`);
+console.log(`You want to sleep ${getIdealSleepHours()} hours.`);
+calculateSleepDebt();
