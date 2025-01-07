@@ -1,0 +1,63 @@
+console.log("hi");
+const getUserChoice = (userInput) => {
+  userInput = userInput.toLowerCase();
+  if (
+    userInput === "rock" ||
+    userInput === "paper" ||
+    userInput === "scissors" ||
+    userInput === "sword"
+  ) {
+    return userInput;
+  } else {
+    console.log("Error");
+  }
+};
+function getComputerChoice() {
+  randNum = Math.floor(Math.random() * 3);
+  if (randNum === 0) {
+    return "rock";
+  } else if (randNum === 1) {
+    return "paper";
+  } else if (randNum === 2) {
+    return "scissors";
+  }
+  return randNum;
+}
+console.log(getComputerChoice());
+
+function determineWinner(userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
+    return "Tie Game!";
+  }
+  if (userChoice === "rock") {
+    if (computerChoice === "paper") {
+      return "Computer Won!";
+    } else {
+      return "User Won!";
+    }
+  } else if (userChoice === "paper") {
+    if (computerChoice === "rock") {
+      return "User Won!";
+    } else {
+      return "Computer Won";
+    }
+  } else if (userChoice === "scissors") {
+    if (computerChoice === "rock") {
+      return "Computer Won!";
+    } else {
+      return "User Won!";
+    }
+  }
+  else if(userChoice === "sword"){
+    return "This always wins!"
+  }
+}
+
+function playGame() {
+  var userChoice = getUserChoice("rock");
+  var computerChoice = getComputerChoice();
+  console.log("You chose: " + userChoice);
+  console.log("Computer Chose: " + computerChoice);
+  console.log(determineWinner(userChoice, computerChoice));
+}
+playGame();
