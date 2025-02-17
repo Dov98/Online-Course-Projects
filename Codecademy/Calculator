@@ -1,0 +1,29 @@
+//This program is a rudimentary calculator
+public class Calculator{
+  //Not sure why I was asked to make a Calculator constructor if it is supposed to be left empty. Deleting it has no negative ramifications.
+    public Calculator(){
+      
+    }
+    public String add(int a, int b){
+      return "The result of the addition is: "+ (a + b);
+    }
+    public String subtract(int a, int b){
+      return "The result of the subtraction is: " +  (a-b);
+    }
+    public String multiply(int a, int b){
+      return "The result of the multiplication is: " + (a*b);
+    }
+    public String divide(int a, int b){
+      return "The result of the division is: " + (a/b);
+    }
+    public String modulo(int a, int b){
+      return "The modulus is: " + (a % b);
+    }
+    public static void main(String[] args){
+      Calculator myCalculator = new Calculator();
+
+      System.out.println(myCalculator.add(5,7));
+      System.out.println(myCalculator.subtract(45,11));
+  }
+
+}
