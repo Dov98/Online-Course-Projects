@@ -1,0 +1,29 @@
+//Just simple classes, methods and behavior
+public class Droid{
+  int batteryLevel;
+  String name;
+
+public String toString(){
+  return "Hello, I'm the droid: " + name;
+}
+
+public String performTask(String task){
+  batteryLevel -= 10;
+  return name + " is performing task: " + task;
+}
+
+public String energyReport(){
+  return "You battery level is at " + batteryLevel + " percent";
+}
+
+  public Droid(String droidName){
+    name = droidName;
+    batteryLevel = 100;
+  }
+  public static void main(String[] args){
+    Droid Codey = new Droid("Codey");
+    System.out.println(Codey);
+    System.out.println(Codey.performTask("cleaning"));
+    System.out.println(Codey.energyReport());
+  }
+}
