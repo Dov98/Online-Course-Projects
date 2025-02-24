@@ -1,0 +1,68 @@
+import java.util.Arrays;
+import java.util.ArrayList;
+
+class Playlist {
+  public static void main(String[] args){
+    //Adding songs to favorite songs array
+    String[] favoriteSongs = new String[10];
+    favoriteSongs[0] = "Queen - Bohemian Rhapsody";
+    favoriteSongs[1] = "Artist - Song 2";
+    favoriteSongs[2] = "Artist - Song 3";
+    favoriteSongs[3] = "Artist - Song 4";
+    favoriteSongs[4] = "Artist - Song 5";
+    favoriteSongs[5] = "Artist - Song 6";
+    favoriteSongs[6] = "Artist - Song 7";
+    favoriteSongs[7] = "Artist - Song 8";
+    favoriteSongs[8] = "Artist - Song 9";
+    favoriteSongs[9] = "Artist - Song 10";
+
+//Printing out first 3 favorite songs
+    System.out.println(favoriteSongs[0]);
+    System.out.println(favoriteSongs[1]);
+    System.out.println(favoriteSongs[2]);
+
+//Creating an Array List of songs to bring to the island
+    ArrayList<String> desertIslandPlaylist = new ArrayList<String>();
+
+    desertIslandPlaylist.add("Artist - desert island song 1");
+    desertIslandPlaylist.add("Artist - desert island song 2");
+    desertIslandPlaylist.add("Artist - desert island song 3");
+    desertIslandPlaylist.add("Artist - desert island song 4");
+    desertIslandPlaylist.add("Artist - desert island song 5");
+
+//Printing out whole desert island playlist
+    System.out.println(desertIslandPlaylist);
+
+    //Converting the favoriteSongs aray into a list and adding them to the desertIslandPlaylist array
+    desertIslandPlaylist.addAll(Arrays.asList(favoriteSongs));
+
+    //Checking the size of the playlist as now we can only bring 5 songs
+    System.out.println(desertIslandPlaylist.size());
+    //removing less favorite songs
+    desertIslandPlaylist.remove("Artist - Song 4");
+    desertIslandPlaylist.remove("Artist - Song 5");
+    desertIslandPlaylist.remove("Artist - Song 6");
+    desertIslandPlaylist.remove("Artist - Song 7");
+    desertIslandPlaylist.remove("Artist - Song 8");
+    desertIslandPlaylist.remove("Artist - Song 9");
+    desertIslandPlaylist.remove("Artist - Song 10");
+    desertIslandPlaylist.remove("Artist - desert island song 3");
+    desertIslandPlaylist.remove("Artist - desert island song 4");
+    desertIslandPlaylist.remove("Artist - desert island song 5");
+    //Checking new size of playlist
+    System.out.println(desertIslandPlaylist.size());
+
+    //Storing 2 song indices in variables to startswitchng the order
+    int songA = desertIslandPlaylist.indexOf("Queen - Bohemian Rhapsody");
+    int songB = desertIslandPlaylist.indexOf("Artist - desert island song 1");
+
+    //Creating a temporary version to hold song A
+    String tempA = "Queen - Bohemian Rhapsody";
+    
+    //Setting the songs into each others places
+    desertIslandPlaylist.set(songA, "Artist - desert island song 1");
+    desertIslandPlaylist.set(songB, tempA);
+
+    System.out.println(desertIslandPlaylist);
+  }
+}
