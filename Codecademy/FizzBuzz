@@ -1,0 +1,21 @@
+class FizzBuzz {
+
+    public static void main(String[] args) {
+
+    for (int i = 1; i <= 100; i++){
+      //If the number is a multiple of 3 and 5 it prints FizzBuzz
+      if(i % 3 == 0 && i % 5 == 0){
+        System.out.println("FizzBuzz");
+      //If the number is a multiple of 3 it prints FizzBuzz
+      }else if(i % 3 == 0){
+        System.out.println("Fizz");
+      //If the number is a multiple of 5 it prints Buzz
+      }else if(i % 5 == 0){
+        System.out.println("Buzz");
+      //If neither it just prints the number
+      }else{
+          System.out.println(i);
+      }
+    }
+  }
+}
